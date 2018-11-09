@@ -2,7 +2,7 @@
 
 ## Objectifs du jour
 
-:zero::nine://:one::one:
+:zero::nine:/:one::one:
 
 - Compréhension du sujet
 - navigation ou dev sur la page salarié
