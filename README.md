@@ -1,8 +1,13 @@
 # gta-ynov-vue
 
-## Objectifs du jour :
+## Objectifs du jour
 
-:zero::eight:/:one::one: : 
+:zero::nine://:one::one
+
+- Compréhension du sujet
+- navigation ou dev sur la page salarié
+
+:zero::eight:/:one::one:
 
 - Lecture du sujet :heavy_check_mark:
 - Installation de l'environnement :heavy_check_mark:
