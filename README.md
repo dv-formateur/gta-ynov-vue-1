@@ -6,7 +6,8 @@
 
 - Compréhension du sujet :heavy_check_mark:
 - navigation ou dev sur la page salarié :x:
-:pencil2: navbar avec zone de connexion, navigation entre différentes pages (boostrap-vue) et début de page connexion
+
+- :pencil2: navbar avec zone de connexion, navigation entre différentes pages (boostrap-vue) et début de page connexion
 
 :zero::eight:/:one::one:
 
