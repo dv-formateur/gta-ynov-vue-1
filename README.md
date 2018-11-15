@@ -1,5 +1,29 @@
 # gta-ynov-vue
 
+## Objectifs du jour
+
+:one::five:/:one::one:
+- Correction projet Github + remarques sur le projet de Steven :heavy_check_mark:
+- Bouton déroulant pour accès au profil et à la page de connexion :heavy_check_mark:
+- Page de profil commencée :heavy_check_mark:
+- Gestion modification champs du profil de l'utilisateur :x:
+
+Remarque :
+- Gestion d'un fichier JSON pour stockage de donnée à faire (et voir comment le faire)
+
+:zero::nine:/:one::one:
+
+- Compréhension du sujet :heavy_check_mark:
+- navigation ou dev sur la page salarié :x:
+
+Détail des développements :
+-  navbar avec zone de connexion, navigation entre différentes pages (boostrap-vue) et début de page connexion :pencil2:
+
+:zero::eight:/:one::one:
+
+- Lecture du sujet :heavy_check_mark:
+- Installation de l'environnement :heavy_check_mark:
+
 ## Project setup
 ```
 npm install
