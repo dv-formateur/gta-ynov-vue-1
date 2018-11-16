@@ -3,8 +3,11 @@
 ## Objectifs du jour
 
 :one::six:/:one::one:
-- Champs profil utilisateur
-- Page de saisie des horaires
+- Champs profil utilisateur :heavy_check_mark:
+- Page de saisie des horaires :x:
+
+Remarque :
+- Travail sur la connexion d'un utilisateur :pencil2:
 
 :one::five:/:one::one:
 - Correction projet Github + remarques sur le projet de Steven :heavy_check_mark:
