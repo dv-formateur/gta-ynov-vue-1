@@ -2,6 +2,10 @@
 
 ## Objectifs du jour
 
+:one::six:/:one::one:
+- Champs profil utilisateur
+- Page de saisie des horaires
+
 :one::five:/:one::one:
 - Correction projet Github + remarques sur le projet de Steven :heavy_check_mark:
 - Bouton déroulant pour accès au profil et à la page de connexion :heavy_check_mark:
