@@ -23,25 +23,19 @@
           <b-nav-form>
             <!-- <b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Search" />
                   <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button> -->
-            <b-form inline>
+            <b-form @submit="onSubmit" inline>
               <label class="sr-only" for="inlineFormInputEmail">Email</label>
-              <b-input size="sm" class="mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputEmail" placeholder="Adresse mail" />
-              <label class="sr-only" for="inlineFormInputGroupPassword">Password</label>
+              <b-input size="sm" type="email" class="mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputEmail" placeholder="Adresse mail" v-model="myJson.email"/>
+              <label class="sr-only" for="inlineFormInputGroupPassword" label-for="inlineFormInputPassword">Password</label>
               <b-input-group left="@" class="mb-2 mr-sm-2 mb-sm-0">
-                <b-input size="sm" id="inlineFormInputGroupPassword" placeholder="Mot de passe" />
+                <b-input size="sm" type="password" id="inlineFormInputPassword" placeholder="Mot de passe" v-model="myJson.password"/>
               </b-input-group>
               <b-form-checkbox size="sm" class="mb-2 mr-sm-2 mb-sm-0" style="color: white;">Remember me</b-form-checkbox>
-              <b-button size="sm" variant="primary">Connexion</b-button>
+              <b-button size="sm" class="my-2 my-sm-0" type="submit" variant="primary" >Connexion</b-button>
             </b-form>
           </b-nav-form>
   
-          <b-nav-item-dropdown text="Langue" right>
-            <b-dropdown-item href="#">FR</b-dropdown-item>
-            <b-dropdown-item href="#">EN</b-dropdown-item>
-            <b-dropdown-item href="#">ES</b-dropdown-item>
-            <b-dropdown-item href="#">RU</b-dropdown-item>
-          </b-nav-item-dropdown>
-  
+          <!-- Liste gestion du profil utilisateur -->
           <b-nav-item-dropdown right>
             <!-- Using button-content slot -->
             <template slot="button-content">
@@ -51,6 +45,15 @@
             <b-dropdown-item to="/connexion">Connexion</b-dropdown-item>
             <b-dropdown-item href="#">Déconnexion</b-dropdown-item>
           </b-nav-item-dropdown>
+  
+          <!-- Liste langues (juste présente par défaut pour le moment) -->
+          <b-nav-item-dropdown text="Langue" right>
+            <b-dropdown-item href="#">FR</b-dropdown-item>
+            <b-dropdown-item href="#">EN</b-dropdown-item>
+            <b-dropdown-item href="#">ES</b-dropdown-item>
+            <b-dropdown-item href="#">RU</b-dropdown-item>
+          </b-nav-item-dropdown>
+          
         </b-navbar-nav>
 
       </b-collapse>
@@ -61,7 +64,39 @@
   </div>
 </template>
 
+<script>
+import json from './json/data_user.json'
 
+export default {
+  data () {
+    return {
+      myJson: json
+    }
+  },
+  methods: {
+    onSubmit (evt) {
+      evt.preventDefault();
+      // Affiche le résultat du formulaire de connexion : email et password
+      alert(JSON.stringify(this.myJson));
+      alert(inlineFormInputEmail.value);
+      alert(inlineFormInputPassword.value);
+
+      // Besoin de traduire le JSON en [] puis faire [].forEach();
+      foreach (compte in myJson)
+      {
+        if (inlineFormInputEmail.value != "" && inlineFormInputPassword.value != "")
+        {
+          if (compte.email == inlineFormInputEmail.value && compte.password == inlineFormInputPassword.value)
+          {
+            compte.connecté = true;
+          }
+        }
+      }
+      
+    }
+  }
+}
+</script>
 
 <style lang="scss">
   #app {

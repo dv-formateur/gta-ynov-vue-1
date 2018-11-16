@@ -28,10 +28,9 @@ export default new Router({
     },
     {
       path: "/profil",
-      name: "/profil",
-      component: () =>{
+      name: "profil",
+      component: () =>
         import("./views/Profil.vue")
-      }
     }
   ]
 });

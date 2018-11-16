@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="connexion">
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
       <b-form-group id="emailInputGroup"
                     label="Adresse Mail :"
