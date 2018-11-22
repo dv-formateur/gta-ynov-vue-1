@@ -15,6 +15,7 @@
   
         <b-navbar-nav>
           <b-nav-item to="/about">About</b-nav-item>
+          <b-nav-item to="/saisiePlanning">Mes Saisies</b-nav-item>
         </b-navbar-nav>
   
         <!-- Right aligned nav items -->

@@ -31,6 +31,12 @@ export default new Router({
       name: "profil",
       component: () =>
         import("./views/Profil.vue")
+    },
+    {
+      path: "/saisiePlanning",
+      name: "saisiePlanning",
+      component: () =>
+        import("./views/SaisiePlanning.vue")
     }
   ]
 });
