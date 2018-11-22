@@ -15,6 +15,7 @@
   
         <b-navbar-nav>
           <b-nav-item to="/saisiePlanning">Mes Saisies</b-nav-item>
+          <b-nav-item to="/Planning">Planning</b-nav-item>
         </b-navbar-nav>
   
         <!-- Right aligned nav items -->
@@ -65,16 +66,16 @@
 </template>
 
 <script>
-import json from './json/data_user.json'
+import json from "./json/data_user.json";
 
 export default {
-  data () {
+  data() {
     return {
       myJson: json
-    }
+    };
   },
   methods: {
-    onSubmit (evt) {
+    onSubmit(evt) {
       evt.preventDefault();
       // Affiche le résultat du formulaire de connexion : email et password
       alert(JSON.stringify(this.myJson));
@@ -82,39 +83,42 @@ export default {
       alert(inlineFormInputPassword.value);
 
       // Besoin de traduire le JSON en [] puis faire [].forEach();
-      foreach (compte in myJson)
+      foreach(compte in myJson);
       {
-        if (inlineFormInputEmail.value != "" && inlineFormInputPassword.value != "")
-        {
-          if (compte.email == inlineFormInputEmail.value && compte.password == inlineFormInputPassword.value)
-          {
+        if (
+          inlineFormInputEmail.value != "" &&
+          inlineFormInputPassword.value != ""
+        ) {
+          if (
+            compte.email == inlineFormInputEmail.value &&
+            compte.password == inlineFormInputPassword.value
+          ) {
             compte.connecté = true;
           }
         }
       }
-      
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
-  #app {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
     color: #2c3e50;
-  }
-  
-  #nav {
-    padding: 30px;
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-      &.router-link-exact-active {
-        color: #42b983;
-      }
+    &.router-link-exact-active {
+      color: #42b983;
     }
   }
+}
 </style>

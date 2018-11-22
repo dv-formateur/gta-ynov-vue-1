@@ -54,30 +54,31 @@
 </template>
 
 <script>
-import json from '../json/data_user.json'
+import json from "../json/data_user.json";
 
 export default {
-  data () {
+  data() {
     return {
-      myJson: json,
       modif: true
-    }
+    };
   },
   methods: {
-    onSubmit (evt) {
+    onSubmit(evt) {
       evt.preventDefault();
       // Affiche le résultat du formulaire de connexion : email et password
       alert(JSON.stringify(this.myJson));
     },
-    onReset (evt) {
+    onReset(evt) {
       evt.preventDefault();
       /* Reset our form values */
-      this.myJson.email = '';
-      this.myJson.password = '';
+      this.myJson.email = "";
+      this.myJson.password = "";
       /* Trick to reset/clear native browser form validation state */
       this.modif = false;
-      this.$nextTick(() => { this.modif = true });
+      this.$nextTick(() => {
+        this.modif = true;
+      });
     }
   }
-}
+};
 </script>

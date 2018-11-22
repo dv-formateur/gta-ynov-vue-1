@@ -30,32 +30,30 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      form: {
-        email: '',
-        password: ''
-      },
       show: true
-    }
+    };
   },
   methods: {
-    onSubmit (evt) {
+    onSubmit(evt) {
       evt.preventDefault();
       // Affiche le résultat du formulaire de connexion : email et password
       alert(JSON.stringify(this.form));
     },
-    onReset (evt) {
+    onReset(evt) {
       evt.preventDefault();
       /* Reset our form values */
-      this.form.email = '';
-      this.form.password = '';
+      this.form.email = "";
+      this.form.password = "";
       /* Trick to reset/clear native browser form validation state */
       this.show = false;
-      this.$nextTick(() => { this.show = true });
+      this.$nextTick(() => {
+        this.show = true;
+      });
     }
   }
-}
+};
 </script>
 
 <!-- b-form-1.vue -->

@@ -1,9 +1,18 @@
 {
-    "user": {
-        "nom": "Desvallées",
-        "prenom": "Alexandre",
-        "email": "alex.desvallees@gmail.com",
-        "password": "test",
-        "connecté": false
+  "user": [
+    {
+      "nom": "Desvallées",
+      "prenom": "Alexandre",
+      "email": "alex.desvallees@gmail.com",
+      "password": "test",
+      "connecté": false,
+      "planning": [
+        {
+          "date": "",
+          "duree": "",
+          "typeConges": ""
+        }
+      ]
     }
+  ]
 }

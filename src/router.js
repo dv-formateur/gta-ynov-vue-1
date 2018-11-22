@@ -23,20 +23,22 @@ export default new Router({
     {
       path: "/connexion",
       name: "connexion",
-      component: () =>
-        import("./views/Connexion.vue")
+      component: () => import("./views/Connexion.vue")
     },
     {
       path: "/profil",
       name: "profil",
-      component: () =>
-        import("./views/Profil.vue")
+      component: () => import("./views/Profil.vue")
     },
     {
       path: "/saisiePlanning",
       name: "saisiePlanning",
-      component: () =>
-        import("./views/SaisiePlanning.vue")
+      component: () => import("./views/SaisiePlanning.vue")
+    },
+    {
+      path: "/planning",
+      name: "planning",
+      component: () => import("./views/Planning.vue")
     }
   ]
 });
