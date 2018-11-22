@@ -5,7 +5,10 @@ https://alexdesvallees.github.io/#/
 ## Objectifs du jour
 
 :two::two:/:one::one:
-- Début Gestion horaires pour le planning
+- Début Gestion horaires pour le planning :heavy_check_mark:
+
+Remarque : 
+- Page saisie planning(manque les heures à saisir) et début page planning 
 
 :one::six:/:one::one:
 - Champs profil utilisateur :heavy_check_mark:
