@@ -1,6 +1,11 @@
 # gta-ynov-vue
 
+https://alexdesvallees.github.io/#/ 
+
 ## Objectifs du jour
+
+:two::two:/:one::one:
+- Début Gestion horaires pour le planning
 
 :one::six:/:one::one:
 - Champs profil utilisateur :heavy_check_mark:
