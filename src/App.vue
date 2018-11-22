@@ -14,7 +14,6 @@
       <b-collapse is-nav id="nav_collapse">
   
         <b-navbar-nav>
-          <b-nav-item to="/about">About</b-nav-item>
           <b-nav-item to="/saisiePlanning">Mes Saisies</b-nav-item>
         </b-navbar-nav>
   
@@ -54,7 +53,7 @@
             <b-dropdown-item href="#">ES</b-dropdown-item>
             <b-dropdown-item href="#">RU</b-dropdown-item>
           </b-nav-item-dropdown>
-          
+          <b-nav-item to="/about">About</b-nav-item>
         </b-navbar-nav>
 
       </b-collapse>
