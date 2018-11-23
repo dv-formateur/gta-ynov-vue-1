@@ -33,12 +33,14 @@ import json from "./json/data_user.json";
 // };
 
 new Vue({
-  data: {},
+  data: {
+    myJson: json
+  },
   router,
   mounted() {
     // Mettre le code localstorage
-    console.log(json);
-    localStorage.setItem("data", JSON.stringify(json));
+    localStorage.setItem("data", JSON.stringify(this.myJson));
+    // console.log(localStorage);
   },
   methods: {},
   render: h => h(App)

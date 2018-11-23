@@ -10,7 +10,8 @@
         {
           "date": "",
           "duree": "",
-          "typeConges": ""
+          "typeConges": "",
+          "presence": false
         }
       ]
     }
