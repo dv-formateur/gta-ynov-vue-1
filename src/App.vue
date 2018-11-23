@@ -66,13 +66,15 @@
 </template>
 
 <script>
-import json from "./json/data_user.json";
-
 export default {
   data() {
     return {
-      myJson: json
+      myJson: {}
     };
+  },
+  mounted() {
+    // On récupère le localstorage dans la page
+    this.myJson = JSON.parse(localStorage.getItem("data"));
   },
   methods: {
     onSubmit(evt) {
@@ -83,20 +85,20 @@ export default {
       alert(inlineFormInputPassword.value);
 
       // Besoin de traduire le JSON en [] puis faire [].forEach();
-      foreach(compte in myJson);
-      {
-        if (
-          inlineFormInputEmail.value != "" &&
-          inlineFormInputPassword.value != ""
-        ) {
-          if (
-            compte.email == inlineFormInputEmail.value &&
-            compte.password == inlineFormInputPassword.value
-          ) {
-            compte.connecté = true;
-          }
-        }
-      }
+      // foreach(compte in myJson);
+      // {
+      //   if (
+      //     inlineFormInputEmail.value != "" &&
+      //     inlineFormInputPassword.value != ""
+      //   ) {
+      //     if (
+      //       compte.email == inlineFormInputEmail.value &&
+      //       compte.password == inlineFormInputPassword.value
+      //     ) {
+      //       compte.connecté = true;
+      //     }
+      //   }
+      // }
     }
   }
 };

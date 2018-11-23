@@ -58,17 +58,19 @@ export default {
   data() {
     return {
       modif: true,
-      myJson: ""
+      myJson: {}
     };
   },
   mounted() {
+    // On récupère le localstorage dans la page
     this.myJson = JSON.parse(localStorage.getItem("data"));
   },
   methods: {
     onSubmit(evt) {
       evt.preventDefault();
       // Affiche le résultat du formulaire de connexion : email et password
-      alert(JSON.stringify(this.myJson));
+      // alert(JSON.stringify(this.myJson));
+      localStorage.setItem("data", JSON.stringify(this.myJson));
     },
     onReset(evt) {
       evt.preventDefault();

@@ -6,7 +6,9 @@
 		</b-row>
 
 		<!-- Ligne d'affichage du planning -->
-		
+		<b-row>
+      
+		</b-row>
 
     </div>
 </template>

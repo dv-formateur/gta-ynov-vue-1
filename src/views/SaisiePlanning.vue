@@ -115,6 +115,7 @@ export default {
     };
   },
   mounted() {
+    // On récupère le localstorage dans la page
     this.myJson = JSON.parse(localStorage.getItem("data"));
   },
   methods: {
@@ -125,7 +126,6 @@ export default {
 
       // Ajout dans le localstorage
       localStorage.setItem("data", JSON.stringify(this.myJson));
-      console.log(localStorage);
     },
     onReset(evt) {
       evt.preventDefault();
