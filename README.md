@@ -5,9 +5,9 @@ https://alexdesvallees.github.io/#/
 ## Objectifs du jour
 
 :two::three:/:one::one:
-- Finir avec le localstorage pour la saisie planning
-- Implémentation localstorage pour la connexion
-- Affichage du planning
+- Finir avec le localstorage pour la saisie planning :heavy_check_mark:
+- Implémentation localstorage pour la connexion (juste début mais aucune implémentation lié à la connexion/login) :x:
+- Affichage du planning (débuté) :x:
 
 :two::two:/:one::one:
 - Début Gestion horaires pour le planning :heavy_check_mark:
