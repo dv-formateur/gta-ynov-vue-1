@@ -8,10 +8,13 @@
       "connecté": false,
       "planning": [
         {
-          "date": "",
-          "duree": "",
-          "typeConges": "",
-          "presence": false
+          "date": null,
+          "duree": null,
+          "typeConges": null,
+          "presence": false,
+          "heureDeb": null,
+          "heureFin": null,
+          "pauseMidi": null
         }
       ]
     }

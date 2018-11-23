@@ -2,6 +2,7 @@
   <div id="saisiePlanning">
     <b-container fluid>
       <b-form @submit="onSubmit" @reset="onReset">
+        <b-alert v-if="this.showDismissibleAlert == true" show variant="danger" >Une saisie existe déjà, veuillez reset puis enregistrer votre saisie</b-alert>
           <!-- Ligne pour la date et le bouton de présence -->
           <div class="row justify-content-center" style="padding: 5px;">
             <b-col col md="2" >
@@ -98,6 +99,7 @@ export default {
     return {
       myJson: {},
       modif: true,
+      showDismissibleAlert: false,
       optionsDuree: [
         { text: "Matinée", value: "matin" },
         { text: "Après-Midi", value: "aprem" },
@@ -124,23 +126,49 @@ export default {
       // Affiche le résultat du formulaire dans une popup
       // alert(JSON.stringify(this.myJson));
 
-      // Ajout dans le localstorage
-      localStorage.setItem("data", JSON.stringify(this.myJson));
+      //Contrôles si on saisie une présence ou une absence
+      if (this.myJson.user[0].planning[0].presence == true) {
+        if (this.myJson.user[0].planning[0].typeConges != null) {
+          this.showDismissibleAlert = true;
+          console.log(this.showDismissibleAlert);
+          throw "reset your current demand";
+          // throw new ExceptionUtilisateur("reset your current demand");
+        } else {
+          // Ajout dans le localstorage
+          localStorage.setItem("data", JSON.stringify(this.myJson));
+        }
+      } else {
+        if (this.myJson.user[0].planning[0].heureDeb != null) {
+          this.showDismissibleAlert = true;
+          console.log(this.showDismissibleAlert);
+          throw "reset your current demand";
+          // throw new ExceptionUtilisateur("reset your current demand");
+        } else {
+          // Ajout dans le localstorage
+          localStorage.setItem("data", JSON.stringify(this.myJson));
+        }
+      }
     },
     onReset(evt) {
       evt.preventDefault();
       /* Reset our form values */
-      this.myJson.date = "";
-      this.myJson.duree = "";
-      this.myJson.typeConges = "";
-      this.myJson.heureDeb = "";
-      this.myJson.heureFin = "";
-      this.myJson.pauseMidi = "";
+      this.myJson.user[0].planning[0].date = null;
+      this.myJson.user[0].planning[0].duree = null;
+      this.myJson.user[0].planning[0].typeConges = null;
+      this.myJson.user[0].planning[0].heureDeb = null;
+      this.myJson.user[0].planning[0].heureFin = null;
+      this.myJson.user[0].planning[0].pauseMidi = null;
       /* Trick to reset/clear native browser form validation state */
       this.modif = false;
+      this.showDismissibleAlert = false;
       this.$nextTick(() => {
         this.modif = true;
       });
+      localStorage.setItem("data", JSON.stringify(this.myJson));
+    },
+    ExceptionUtilisateur(message) {
+      this.message = message;
+      this.name = "ExceptionUtilisateur";
     }
   }
 };
